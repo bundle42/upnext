@@ -1,12 +1,12 @@
 # UpNext
-https://42upnext.com/
-뉴스 기반 주가 예측 플랫폼
+- https://42upnext.com/
+- 뉴스 기반 주가 예측 플랫폼
 
-문제 정의: 뉴스 데이터만으로는 주가 방향성을 정량적으로 반영하기 어려움
-솔루션: 뉴스 감성 데이터를 날짜별 시계열 feature로 변환 + LSTM 기반 예측
-성과: Baseline 대비 약 8% 성능 개선 (55% → 63%)
-기술 스택: React, Spring Boot, FastAPI, LSTM, AWS Infra
-역할: 전체 시스템 설계, Backend/AI 서버 핵심 기능 개발, Frontend 주요 기능 구현
+- 문제 정의: 뉴스 데이터만으로는 주가 방향성을 정량적으로 반영하기 어려움
+- 솔루션: 뉴스 감성 데이터를 날짜별 시계열 feature로 변환 + LSTM 기반 예측
+- 성과: Baseline 대비 약 8% 성능 개선 (55% → 63%)
+- 기술 스택: React, Spring Boot, FastAPI, LSTM, AWS Infra
+- 역할: 전체 시스템 설계, Backend/AI 서버 핵심 기능 개발, Frontend 주요 기능 구현
 
 ## 🧠 Summary
 뉴스 감성 데이터를 시계열 feature로 재구성하여, 주가 상승/하락 예측 정확도를 개선한 AI 기반 웹 플랫폼
@@ -82,40 +82,40 @@ EC2 인스턴스를 통해 서비스 운영 및 원격 배포 환경 구성
 
 ## ⚙️ 로컬 실행
 
-run.bat
-환경변수 설정
+- run.bat
+- 환경변수 설정
 
-upnext-frontend
-npm run dev
+- upnext-frontend
+- npm run dev
 
-upnext-backend
-gradlew bootRun
+- upnext-backend
+- gradlew bootRun
 
-upnext-ai
-venv\Scripts\activate && uvicorn main:app --reload --port 8000
+- upnext-ai
+- venv\Scripts\activate && uvicorn main:app --reload --port 8000
 
 ## 📂 업로드 경로
 
-환경 경로
-로컬 C:/Users/LENOVO/springboot_img
-EC2 /home/ec2-user/uploads
+- 환경 경로
+- 로컬 C:/Users/LENOVO/springboot_img
+- EC2 /home/ec2-user/uploads
 
-Nginx 설정
-/etc/nginx/nginx.conf
+- Nginx 설정
+- /etc/nginx/nginx.conf
 
-Spring 환경변수 설정
-/home/ec2-user/app/app.env
+- Spring 환경변수 설정
+- /home/ec2-user/app/app.env
 
 ## 🔗 프록시 설정
 
-Vite
-/api → localhost:8080
-/uploads → localhost:8080
-Spring
-/uploads/\*\* → file:UPLOAD_DIR/
-Nginx (EC2)
-/uploads → 로컬 파일 경로
-/api → Spring 서버
+- Vite
+- /api → localhost:8080
+- /uploads → localhost:8080
+- Spring
+- /uploads/\*\* → file:UPLOAD_DIR/
+- Nginx (EC2)
+- /uploads → 로컬 파일 경로
+- /api → Spring 서버
 
 ## 📰 News Data Pipeline
 
